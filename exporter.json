@@ -5,7 +5,9 @@
     "author": "Talend and Ivan Terpugov & Jiri Trecak",
     "organization": "Talend",
     "source_dir": "src",
-    "version": "1.1",
+    "homepage": "https://design.talend.com",
+    "version": "1.2",
+    "usesBrands": true,
     "config": {
         "sources": "sources.json",
         "output": "output.json",
@@ -16,7 +18,7 @@
         "supernova": "1.0.0"
     },
     "tags": [
-        "SCSS",
+        "CSS",
         "Tokens",
         "Styles"
     ]
