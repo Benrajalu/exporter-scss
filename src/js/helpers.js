@@ -144,10 +144,15 @@ Pulsar.registerFunction("logKeys", function (object) {
   }
 });
 
-Pulsar.registerFunction("baseWrap", function (token) {
+Pulsar.registerFunction("baseWrap", function (token, designSystemName) {
   const stringPrefix = token.split(":")[0];
+  const safeName = designSystemName.toLowerCase();
   if (stringPrefix === "data") {
     return `url("${token}")`;
+  }
+
+  if(token.includes('keyframes')){
+    return token.replace('coral', `coral-${safeName}`);
   }
 
   return token;
